@@ -18,3 +18,27 @@ int main()
  scanf("%d",&num);
  printf("数量是%d",num);
  }
+
+
+//getchar 是读取用户输入的单个字符
+//输入时将输入放到缓存空间，getchar读取时一个一个读取
+
+#include <stdio.h>
+
+int main()
+ {
+ char ch1,ch2;
+ printf("请输入一个字符：");
+ //scanf("%c",&ch); 输入单个字符的等价写法
+ ch1=getchar();  //a
+ //清空缓冲区
+ fflush(stdin);
+ printf("请输入第二个字符:");
+ ch2=getchar();  //回车键\n
+ //打印单个字符
+ printf("您输入的字符是：");
+ putchar(ch1);
+ putchar(',');
+ putchar(ch2);  //putchar一次只能打印一个字符
+ return 0;
+  }
