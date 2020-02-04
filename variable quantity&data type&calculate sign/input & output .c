@@ -42,3 +42,19 @@ int main()
  putchar(ch2);  //putchar一次只能打印一个字符
  return 0;
   }
+
+
+
+#include <stdio.h>
+
+int main()
+ {
+ //printf控制打印数字的宽度
+ printf("**%d**\n",8);
+ printf("**%4d**\n",8);  //打印宽度为4
+ printf("**%04d**\n",8); //打印时补0
+ printf("**%8.2f**\n",4.5);  //打印长度为8 保留两位小数，默认是右对齐
+ printf("**%-8.2f**\n",4.5); //加上负号，变成左对齐
+ return 0;
+  }
+
