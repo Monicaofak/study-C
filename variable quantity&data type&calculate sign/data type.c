@@ -61,3 +61,13 @@ void main()
 }
 
 
+
+#include <stdio.h>
+
+int main()
+ {
+  double num=6; //整型转双精度浮点型（小类型转大类型-自动类型转换）
+  int num1=(int)num;  //大类型转小类型，会损失精度（强制类型转换）
+  }
+
+
