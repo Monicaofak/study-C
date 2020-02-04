@@ -57,3 +57,30 @@ int main()
  printf("sizeof(char)=%d\n",sizeof(char));
  return 0;
  }
+
+
+
+/*算术运算符+、-、*、/、%
+关系运算符>、<、>=、<=、==、！=
+逻辑运算符 && || ！
+优先级
+() sizeof ++ --
+！
+算术运算符
+关系运算符
+&&
+||
+赋值运算符
+*/
+
+#include <stdio.h>
+
+int main()
+ {
+ printf("%d\n",8==9);
+ printf("%d\n",5>9 && 4<7);
+ //运算符的优先级
+ int num=10;
+ int result=num++ > 11 && --num<20;  //10>11假，不再执行（短路）所以整个为假，在+1
+ printf("result=%d\tnum=%d\n",result,num);
+ }
