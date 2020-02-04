@@ -15,3 +15,28 @@ int main()
  int num=5000;  //划定内存空间叫num，取值为5000
  return 0;
  }
+
+
+#include <stdio.h>
+
+int main()
+ {
+ int salary1=2500;  //声明并初始化
+ int salary2;       //先声明后初始化
+ salary2=2500;
+ printf("小明的月薪是%d\n",salary1);
+ //%表示转换说明符的开始 %d 整型占位符 表示后面给一个整型的数字显示  %%将会输出一个%
+ return 0;
+ }
+//变量名不要重复
+//一条语句可以声明多个同类型变量
+
+
+#include <stdio.h>
+
+int main()
+ {
+ int num1=10;
+ int num2=8;
+ printf("对穿肠：%d口心思，思君思国思社稷。\n唐伯虎：%d目共赏，赏花赏月赏秋香。\n",num1,num2);
+ }
