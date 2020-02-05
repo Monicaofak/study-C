@@ -38,9 +38,121 @@ int main()
  int peer=1;
  while(day>0)
  {
+  
+  
+  
+  //求1-100间的偶数和
+#include <stdio.h>
+int main()
+ {
+ int sum=0;
+ int i;
+ for(i=0;i<100;i++)
+ {
+ if(i%2==0)
+ {
+ sum=sum+i;
+ }
+ }
+ printf("sum=%d",sum);
+ return 0;
+ }
+ //循环次数确定，一般用for循环，不确定一般用while do-while循环
+
+ //打印图形
+ //行：一共有几行
+//列数：每行有几颗星
+//外层循环控制行（行、换行），内层循环控制列（列数，打印的图形）
+#include <stdio.h>
+int main()
+ {
+ int i,j;
+ for(i=0;i<10;i++)
+ {
+ for(j=0;j<5;j++)
+ {
+ printf("%c",'A'+i);
+ }
+ printf("\n");
+ }
+ return 0;
+ }
+
+#include <stdio.h>
+int main()
+ {
+ int i,j;
+ for(i=0;i<10;i++)
+ {
+ for(j=0;j<5;j++)
+ {
+ printf("%c",'A'+j);
+ }
+ printf("\n");
+ }
+ return 0;
+ }
+
  peer=(peer+1)*2;
  day--;
  }
  printf("peer=%d",peer);
  return 0;
  }
+
+#include <stdio.h>
+int main()
+ {
+ int i,j;
+ for(i=0;i<4;i++)
+ {
+     for(j=0;j<=2-i;j++)
+     {
+     printf(" ");  //打印空格（嵌套在内层循环中）
+     }
+     for(j=0;j<=2*i;j++)
+     {
+     printf("*");
+     }
+ printf("\n");
+ }
+ for(i=0;i<3;i++)
+ {
+     for(j=0;j<=i;j++)
+     {
+     printf(" ");
+     }
+     for(j=0;j<=4-2*i;j++)
+     {
+     printf("*");
+     }
+ printf("\n");
+ }
+ return 0;
+ }
+
+
+#include <stdio.h>
+int main()
+ {
+ int i,j;
+ for(i=0;i<4;i++)
+ {
+     for(j=0;j<=2-i;j++)
+     {
+     printf(" ");  //打印空格（嵌套在内层循环中）
+     }
+     for(j=0;j<=2*i;j++)
+     {
+     //挖空：判断什么时候打印*,什么时候打印空格
+     if(i==0||i==3||j==0||j==2*i)
+        printf("%c",'*');
+     else
+     printf(" ");
+     }
+ printf("\n");
+ }
+
+ return 0;
+ }
+
